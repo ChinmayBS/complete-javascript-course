@@ -1,5 +1,6 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
+/*custom properties  */
 :root {
   --color-primary: #5ec576;
   --color-secondary: #ffcb03;
@@ -343,7 +344,6 @@ h4 {
   width: 7rem;
   border-radius: 50%;
 }
-
 .operations__icon svg {
   height: 2.75rem;
   width: 2.75rem;
