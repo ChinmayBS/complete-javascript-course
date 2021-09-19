@@ -234,31 +234,31 @@ PersonCl.prototype.greet = function () {
 //
 //
 //inheritance between classes:Constructor functions
-// const Person = function (firstName, birthYear) {
-//   //Instance properties
-//   //all objects will have these properties
-//   this.firstName = firstName;
-//   this.birthYear = birthYear;
-// };
-// Person.prototype.calcAge = function () {
-//   console.log(-this.birthYear + 2037);
-// };
-// const Student = function (firstName, birthYear, course) {
-//   // console.log(this);
-//   Person.call(this, firstName, birthYear);
-//   this.course = course;
-// };
+const Person = function (firstName, birthYear) {
+  //Instance properties
+  //all objects will have these properties
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+Person.prototype.calcAge = function () {
+  console.log(-this.birthYear + 2037);
+};
+const Student = function (firstName, birthYear, course) {
+  // console.log(this);
+  Person.call(this, firstName, birthYear);
+  this.course = course;
+};
 
-// Student.prototype = Object.create(Person.prototype);
-// Student.prototype.introduce = function () {
-//   console.log(`${this.firstName} ${this.birthYear} ${this.course}`);
-// };
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.introduce = function () {
+  console.log(`${this.firstName} ${this.birthYear} ${this.course}`);
+};
 
-// const mike = new Student('Mike', 2020, 'Computer Science');
-// mike.introduce();
-// mike.calcAge();
-// // Student.prototype.constructor = Student;
-// console.dir(Student.prototype.constructor);
+const mike = new Student('Mike', 2020, 'Computer Science');
+mike.introduce();
+mike.calcAge();
+// Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
 
 //
 //
